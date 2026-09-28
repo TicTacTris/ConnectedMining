@@ -2,13 +2,19 @@
 
 A Valheim mod for single-player, player-hosted multiplayer, and dedicated servers: break a mineable deposit section with your pickaxe and the touching, tool-eligible sections are mined automatically. Different resource types and adjacent deposits can connect. Buried sections are included when their colliders are loaded and connected.
 
-**Multiplayer coordination is implemented in 1.1.0, but has not yet been play-tested on a live dedicated server.** Build, geometry, reservation, dispatch-state, and game-API checks pass; the two-client integration tests below are still required.
+**Tested with Valheim 1.0.16. Multiplayer works when Connected Mining 1.1.0 is installed and enabled on the server and every connected player.** All participants must use the same mod version; if a player is missing the mod or has an incompatible version, automatic mining is disabled until everyone is compatible. Ordinary mining is unaffected.
+
+Build, geometry, reservation, dispatch-state, and game-API checks pass. Live multiplayer testing was reported by the user; the automated tests are not a substitute for in-game testing.
 
 **Automatic mining never digs, lowers, levels, or otherwise modifies the ground.** It calls the deposit's damage handler directly, not the pickaxe attack or terrain code. Your actual pickaxe swing retains its vanilla terrain behavior.
 
+## License
+
+This project is licensed under the MIT License. You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, subject to the conditions in [`LICENSE`](LICENSE). This license applies to this project's original source and releases, not to Valheim, BepInEx, or other third-party components.
+
 ## Requirements
 
-- Valheim **1.0.15** (the installed assemblies used for this build).
+- Valheim **1.0.16** (tested).
 - [BepInExPack_Valheim **5.4.2351**](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/), based on BepInEx 5.4.23.5. Latest listed pack checked September 25, 2026.
 - No other mod dependencies. Harmony is the copy already supplied by BepInEx.
 - Install **Connected Mining 1.1.0 on the server and every connected player**. This is not a server-only mod. Earlier versions cannot participate in the protocol.
