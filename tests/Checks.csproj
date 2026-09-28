@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Geometry.cs" Link="Geometry.cs" />
+    <Compile Include="..\src\ChainLedger.cs" Link="ChainLedger.cs" />
+    <Compile Include="..\src\DispatchLease.cs" Link="DispatchLease.cs" />
+    <Reference Include="Mono.Cecil"><HintPath>D:\ValheimModTools\BepInExPack-5.4.2351\BepInExPack_Valheim\BepInEx\core\Mono.Cecil.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>
